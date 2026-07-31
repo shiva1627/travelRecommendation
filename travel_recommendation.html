@@ -132,6 +132,45 @@
             border-radius: 4px;
             cursor: pointer;
         }
+        
+        .results-container {
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    width: 600px;
+    max-height: 75vh;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    z-index: 100;
+}
+
+.result-card {
+    background: rgba(15, 23, 42, 0.95);
+    border: 1px solid #0d9488;
+    padding: 15px;
+    border-radius: 8px;
+    color: white;
+}
+
+.result-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.result-card h3 {
+    margin: 10px 0 5px;
+    font-size: 1rem;
+}
+
+.result-card p {
+    font-size: 0.8rem;
+    color: #cbd5e1;
+    margin: 0;
+}
     </style>
 </head>
 <body>
@@ -148,7 +187,7 @@
         <div class="navbar-links">
             <a href="travel_recommendation.html">Home</a>
             <a href="about.html">About Us</a>
-            <a href="#">Contact Us</a>
+            <a href="contact.html">Contact Us</a>
         </div>
 
         <div class="navbar-search">
@@ -175,6 +214,8 @@
             <button class="book-now-btn">Book Now</button>
         </div>
     </main>
-
+    <!-- Search Results Container -->
+    <div id="resultContainer" class="results-container"></div>
+    <script src="travel_recommendation.js"></script>
 </body>
 </html>
